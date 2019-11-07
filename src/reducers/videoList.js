@@ -3,7 +3,10 @@ import Redux from 'redux';
 
 var videoListReducer = (state = [], action) => {
   if (action.type === 'CHANGE_VIDEO_LIST') {
-    return action.videos;
+    let newState = {};
+    let state = Object.assign(newState, state);
+    newState.videos = action.videos;
+    return newState.videos;
   }
   return state;
   //TODO: define a reducer for the videoList field of our state.
