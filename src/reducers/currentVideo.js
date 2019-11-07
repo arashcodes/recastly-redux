@@ -1,6 +1,5 @@
 import Redux from 'redux';
 import changeVideo from '../actions/currentVideo.js';
-import App from '../components/App.js';
 
 var currentVideoReducer = (state = null, action) => {
   if (action.type === 'CHANGE_VIDEO') {

@@ -14,9 +14,9 @@ let theStore = store();
 
 ReactDOM.render(
   <Provider store={theStore} >
-    <App />
+    {/* <App /> */}
     <Search />
+    <App API_KEY={YOUTUBE_API_KEY} searchYouTube={searchYouTube} />
   </Provider>,
-  <App API_KEY={YOUTUBE_API_KEY} searchYouTube={searchYouTube} />,
   document.getElementById('app')
 );
